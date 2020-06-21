@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <math.h>
+
+long tenPow(int x);
+
+int main(void){
+  long num = 4003600000000014;
+  long sum = 0;
+  int second = 0;
+  /* sum = num%(pow(10,15))-num%(pow(10,14)); */
+  /* sum = num % tenPow(14); */
+  /* sum = num % tenPow(14); */
+
+
+  /* sum = (num % tenPow(2)) - (num % tenPow(1))/10; */
+  /* sum = ((num%tenPow(2)) - (num % tenPow(1))) / tenPow(1); */
+  /* for(int i = 1; i <= 15; i+=2) { */
+  /*   int mod =  (((num%tenPow(i+1)) - (num % tenPow(i))) / tenPow(i)) * 2; */
+  /*   if(mod>9){ */
+  /*     do{ */
+  /*       int r = mod % 10; */
+  /*       if(mod%10==0){ */
+  /*        r = (mod % 100)/10; */
+  /*        printf("eef%i\n", r); */
+  /*        mod -= mod; */
+  /*        sum+=r; */
+  /*       } else { */
+  /*         sum+=r; */
+  /*         mod-=r; */
+  /*       } */
+  /*       /1* printf("mod: %i\n", mod); *1/ */
+  /*     } while (mod>0); */
+  /*     printf("%i\n", mod); */
+
+      
+  /*     /1* while (mod > 0){ *1/ */
+  /*     /1*   int r = mod % 10; *1/ */
+  /*     /1*   printf("%i", r); *1/ */
+  /*     /1*   mod -= r; *1/ */
+  /*     /1*   sum += r; *1/ */
+  /*     /1* } *1/ */
+  /*   } else { */
+  /*     sum += mod; */
+  /*   } */
+  /* } */
+
+    /* printf("%i!\n", sum); */
+    for(int j = -1; j <= 4; j+=2) {
+      if(mod )
+      int mod = (num % tenPow(j))-(num % tenPow(j+1));
+      printf("s%i\n", mod);
+      second+=mod;
+   } 
+      printf("%li\n", second);
+
+
+
+  /* printf("%li", sum); */
+}
+
+long tenPow(int x){
+  long long pow = 1;
+  for (int i = 1; i <= x; i++){
+    pow *= 10;
+  }
+  return pow;
+}
